@@ -65,3 +65,8 @@ Here are various use cases for the git branch command:
 
 Now, we will push all our changes to the remote repository that we set up earlier.
 Hence, we will practice the `git push` command.
+
+Let's practice a little bit of git conflict issues as well.
+I will create a git conflict by making changes to the remote repository and then pull to the local repository.
+This will create a merge conflict that will have to be resolved locally.
+Though git conflict can either be resolved locally or remotely depending on the specific case.
