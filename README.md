@@ -61,3 +61,7 @@ Here are various use cases for the git branch command:
 - Delete a local branch: `git branch -d branch-to-delete`
 - Delete a remote branch: `git push origin --delete remote-branch-to-delete`
 - Display branches with additional information: `git show branch`
+
+
+Now, we will push all our changes to the remote repository that we set up earlier.
+Hence, we will practice the `git push` command.
