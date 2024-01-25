@@ -70,3 +70,18 @@ Let's practice a little bit of git conflict issues as well.
 I will create a git conflict by making changes to the remote repository and then pull to the local repository.
 This will create a merge conflict that will have to be resolved locally.
 Though git conflict can either be resolved locally or remotely depending on the specific case.
+
+## Git Pull
+This command is used to fetch changes from the remote repository and integrate them into the current branch.
+It is essentially a combination of two other git commands; `git fetch` and `git merge`.
+
+Below are some common usecases for git pull:
+
+- Basic Pull: `git pull`
+- Pull from a specific branch: `git pull origin branch-name`
+- Pull with rebase: `git pull --rebase`
+- Pull a specific remote branch and rebase: `git pull --rebase origin branch-name`
+- Pull with Fetch only: `git pull --no-commit`
+- Pull with Squash: `git pull --squash`
+- verbose pull: `git pull --verbose`
+- Pull from a different remote repository: `git pull other-remote other-branch`
