@@ -26,3 +26,18 @@ A Git and Github Tutorial for beginners
 - Commit only staged changes: `git commit`
 
 
+## Git Status
+### The git status command is used to display the status of the repository and the staging area in your git repository.
+### It provides information about which files are modified and which files are staged for the next commit.
+### It also provides information about which files are untracked.
+### I have used the `git status` command to display the status of the repository files and directory in this tutorial a couple of times now.
+### Here are the various use cases for the git status command:
+
+- Basic Status: `git status`
+- Short Status: `git status -s`
+- Status with branch information: `git status -b`
+- Status including untracked files: `git status -u`
+- Status excluding untracked files: `git status -uno`
+- Status showing renamed files: `git status --r`
+- Status with ignored files: `git status --ignored`
+
