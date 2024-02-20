@@ -32,6 +32,8 @@ Here is a breakdown of what happens during branch synchronization:
 *  `Cherry-pick`: Selectively applies individual commits from one branch to another
 
 <!-- I will demonstrate branch synchronization with git and github shortly -->
+<!-- Now, that I have created a need for synchronization, we will use any of the above methods to synchronize the main branch and this branch we are working in (branch-synchronization) -->
+<!-- Before then, I have to go resolve the git conflict on github -->
 
 ## Basic Methods
 
