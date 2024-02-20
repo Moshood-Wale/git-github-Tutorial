@@ -34,9 +34,87 @@ Here is a breakdown of what happens during branch synchronization:
 <!-- I will demonstrate branch synchronization with git and github shortly -->
 <!-- Now, that I have created a need for synchronization, we will use any of the above methods to synchronize the main branch and this branch we are working in (branch-synchronization) -->
 <!-- Before then, I have to go resolve the git conflict on github -->
+<!-- I couldn't reslove the conflict on Github remotely, I had to use the command line interface to resolve the conflict. -->
+<!-- Before we synchronize these branches, I will talk about each synchronization methods individually -->
 
-## Basic Methods
+## Branch Synchronization Methods
 
-a. Merge:
+### Merging
+In Git and Github, merging serves as a fundamental method of synchronizing branches.
+It integrates changes from one branch usually a feature branch into another branch (usually the main branch like `master`).
 
-* `Mechanics`
+Here's how merging works:
+1. Identifying Branches:
+    * Select the source branch containg the changes you want to integrate e.g. your feature branch
+    * Choose the target branch where you want to merge the changes e.g. the master branch.
+
+2. Git Merge Command:
+    * Use the `git merge` command followed by the source branch name. For example, `git merge feature_branch`.
+    * Git attempts to automatically combine the changes based on commit history.
+
+3. Merge Outcome:
+    * Fast-forward merge: If there are no conflicts, Git simply fast-forwards the target branch pointer to incorporate the source branch's most recent commit. This creates a clean linear history.
+    * Merge Commit: If changes in both branches touch the same files, conflicts arise. Git creates a "merge commit" highlighting the conflicting sections. You need to manually resolve these conflicts by editing the files and marking the resolution. Then, commit the resolved files.
+
+4. Pushing to remote:
+    * Once the merge is complete, push the changes to the remote repository on platforms like Github.
+
+Benefits of Merging:
+- `Preserves History`: Maintains a clear record of individual contributions as separate commits.
+- `Collaboration transparency`: Shows how different branches evolved and merged, aiding in project understanding.
+
+Drawbacks of Merging:
+- `Merge Conflicts`: Requires manual intervention to resolve conflicting changes, which can be time consuming.
+- `Messier history`: Merging creates additional commits, potentially making the commit history more complex.
+
+Merging in Github:
+* Visualize branch changes and potential conflicts on the Github UI.
+* Initiate merge directly through pull requests, allowing review and discussion before integrating changes.
+* Resolve conflicts directly within the Github interface using a code editor.
+
+Choosing Merging:
+* When changes are small and well-isolated, merging is usually preferred.
+* If preserving individual contributions and historical context is important, merging ensures clarity.
+* For larger changes or complex merges, consider alternatives like rebasing depending on your workflow and collaboration style.
+
+
+### Rebasing
+While merging integrates changes from one branch into another, rebasing takes a different approach to branch synchronization. It rewrites the history of your branch, making it appear as if you started your work directly on top of the latest updates in another branch.
+
+Here's is how it works:
+1. Understanding the Base:
+    * Imagine you have a feature branch with several commits containing your work.
+    * Choose the upstream branch, usually master, representing the latest stable codebase.
+
+2. Rebasing Process:
+    * Use the `git rebase` command followed by the upstream branch name e.g. `git rebase master`.
+    * Git temporarily removes your branch and replays each of its commit on top of the latest upstream commit.
+    * It creates new commits with the same changes but different commit IDs and history.
+
+3. Potential Conflicts:
+    * If your branch and the upstream branch modified the same files, conflicts arise.
+    * You need to manually resolve these conflits, similar to merging.
+
+4. Outcome and Integration:
+    * Once resolved, rebase integrates your changes into the target branch with a linear history.
+    * Pushing to remote, like Github, replaces your old branch history with the new one.
+
+Benefits of Rebasing
+- `Clean history`: Creates a linear, easier-to-read history without merge commits.
+- `Easier collaboration`: Simplifies reviewing and understanding changes in a continuous flow.
+- `Smaller pull requests`: Can lead to smaller pull requests on the target branch.
+
+Drawbacks of Rebasing:
+- `Rewrites history`: Loses original commit IDs, potenktially causing confusion if others already based their  work on your old history.
+- `Collaboration risks`: Rebasing public branches without coordination can break others work, leading to conflicts and rework.
+
+Rebasing in Github:
+* Similar to merging, initiate rebase through pull requests, allowing review and conflict resolution
+* Github visualizes the rebased history and potential conflicts.
+
+Choosing Rebasing:
+* Consider rebasing for small, isolated changes if you work alone or have clear communication with collaborators.
+* If preserving original history or avoiding potential disruptions to others is crucial, merging might be a safe option.
+
+<!-- I will demonstrate rebasing before I explain the third branch synchronization method `cherry-pick` -->
+<!-- Basically, I want to rebase or update my present branch with the changes made on the main branch such that the two branches have the latest update. -->
