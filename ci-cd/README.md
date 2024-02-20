@@ -57,3 +57,5 @@ runs tests using pytest, and deploys the application to staging if the code chan
 are on the `main` branch.
 
 <!-- Next steps for practical purposes, we will create a simple django application and set up a CI/CD pipeline for it using Github Actions. -->
+
+<!-- I will update the remote master branch with the changes on this branch, this will inturn create a need for synchronization between the remote master branch and the local branch-synchronization branch. -->
