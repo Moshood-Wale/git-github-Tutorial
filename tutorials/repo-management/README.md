@@ -79,3 +79,5 @@ c. You can then navigate into the cloned directory and start working on the proj
  c. Push your commits to the remote repository using `git push`.
 
  <!-- We will demonstrate this and also raise a Pull Request on it -->
+
+ <!-- I'm adding this comment to demonstrate cherry-picking. Basically, the idea is to sync the changes in this branch with the branch-synchronization branch by picking a specific commit of this branch. This commit will be the one that holds this new changes. -->

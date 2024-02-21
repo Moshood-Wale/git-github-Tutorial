@@ -158,5 +158,7 @@ Usecases of cherry-picking:
 
 <!-- Now, let's demonstrate cherry-picking for branch synchronization. -->
 <!-- So, we will basically follow the steps highlighted above. -->
-
+<!-- Kindly note that I have already picked the commit hash from the other branch (repository-management) branch. -->
+<!-- As predicted, you might run into a git conflict that you will have to resolve locally as we aim to do now. -->
+<!-- We have successfully resolved this conflict and we can now run git add to add all latest changes.  -->
 
