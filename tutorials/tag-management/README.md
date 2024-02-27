@@ -21,3 +21,7 @@ There are two main types of tags in Git:
             git tag -a <tag_name> -m "tag message"
         Example:
             git tag -a v1.0 -m "Release version 1.0"
+
+
+<!-- Hello, I'm trying to make chnges in this branch so that I will be able to synchronize these changes with the required beranch. -->
+<!-- This is all the new changes I will like to add to this branch for now. -->
