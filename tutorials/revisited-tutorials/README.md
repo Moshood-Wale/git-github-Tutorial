@@ -33,7 +33,7 @@ Kindly find below a breakdown of what happens during a branch synchronization:
 
 <!-- I will now go ahead to demonstrate branch synchronization with git and github shortly -->
 <!-- First, I will create a need for synchronization by making changes to any of my already existing branch -->
-<!-- After I have made changes to the existing branch, we now have a need to synchronize this remote branch with our current branch. -->
+<!-- After I have made changes to the existing branch, we now have a need to synchronize this remote branch with our current branch or main branch. -->
 <!-- Before we synchronize these branches, let's talk more about the various synchronization methods that we have:  -->
 
 ## Branch Synchronization Methods
@@ -76,3 +76,46 @@ Choosing Merging:
 - If preserving individual contributions and historical context is important, merging ensures clarity.
 - For larger changes or complex merges, consider alternatives like rebasing depending on your workflow collaboration style.
 <!-- Now, let's practice merging -->
+<!-- We were able to successfully merge the changes on the tag-management branch with the main branch. I also showed the commit log after the merging was completed. We could see the new commit from the tag-management branch merged on top of the previous commits on the main branch. -->
+
+
+### Rebasing
+While merging integrates changes made from one branch into another, rebasing takes a different approach to branch synchronization. It rewrites the history of your branch, making it appear as if you started your work directly on top of the latest updates in another branch.
+
+Here's how rebasing works:
+1. Understanding the Base:
+    - Imagine you have a feature branch with several commits containing your work.
+    - Choose the upstream branch, usually master, representing the latest stable codebase.
+
+2. Rebasing Process:
+    - Use the `git rebase` command followed by the upstream branch name e.g. `git rebase master`.
+    - Git temporarily removes your branch and replays each of its commit on top of the latest upstream commit.
+    - It creates new commits with the same changes but different IDs and history.
+
+3. Potential Conflicts:
+    - If your branch and the upstream branch modified the same files, conflicts arise.
+    - You need to manually resolve these conflicts, similar to merging.
+
+4. Outcome and Integration:
+    - Once resolved, rebase integrates your changes into the target branch with a linear history.
+    - Pushing to remote, like Github, replaces your old branch history with the new one.
+
+Benefits of Rebasing:
+- Clean History: Creates a linear, easier-to-read history without merge commits.
+- Easier Collaboration: Simplifies reviewing and understanding changes in a continuous workflow
+- Smaller Pull Requests: Can lead to smaller pull requests on the tagrget branch.
+
+Drawbacks of Rebasing:
+- Rewrites history: Loses original commit IDs, potentially causing confusion if others already based thier work on your old history.
+- Collaboartion risks: Rebasing public branches without coordination can break others work, leading to conflicts and rework.
+
+Rebasing in Github:
+- Similar to merging, initiate rebase through pull requests, allowing review and conflict resolution.
+- Github visualizes the rebased history and potential conflicts.
+
+Choosing Rebasing:
+- Consider rebasing for small. isolated changes if you work alone or have clear communication with collaborators.
+- If preserving original history or avoiding potential disruptions to others is crucial, merging might be a safe option.
+
+<!-- I will demonstrate rebasing shortly before we talk about Cherry-pick -->
+<!-- Basically, I want to rebase or update my current branch with the latest changes on the main/master branch such that the two branches are in sync. -->
