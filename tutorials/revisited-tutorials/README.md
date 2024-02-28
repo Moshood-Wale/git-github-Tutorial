@@ -130,7 +130,7 @@ Here's how Cherry-Picking works:
     - Decide the target branch where you want to apply the changes.
 
 2. Using the `git cherry pick` command:
-    - Run the `git cherry pick` command followed by the commit hash, e.g. `git cherry pick <commit-hash>`.
+    - Run the `git cherry-pick` command followed by the commit hash, e.g. `git cherry-pick <commit-hash>`.
 
 3. Applying the changes:
     - Git attempts to apply the chosen commit's changes to your current branch.
@@ -160,3 +160,5 @@ Usecases of cherry-picking:
 <!-- Now, let's demonstrate cherry-picking for branch synchronization. -->
 <!-- We will follow the steps highlighed above for cherry-picking -->
 <!-- I will go ahead and pick a commit hash from the repository-management branch. -->
+<!-- I had some issue cherry-picking but I have been able to successfully cheryr-picked a particular commit of the repository-management to our current branch. There was a mistake in the command I had provided earlier.  -->
+<!-- I've made the neccessary corrections. -->
