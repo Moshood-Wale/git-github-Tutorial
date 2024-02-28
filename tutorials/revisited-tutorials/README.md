@@ -119,3 +119,44 @@ Choosing Rebasing:
 
 <!-- I will demonstrate rebasing shortly before we talk about Cherry-pick -->
 <!-- Basically, I want to rebase or update my current branch with the latest changes on the main/master branch such that the two branches are in sync. -->
+<!-- We have successfully synchronized both branches by rebasing. -->
+
+### Cherry-Picking
+In Git, cherry-picking allows you to selectively apply commits from one branch to another, unlike merging or rebasing which integrate all commits. Think of it like picking specific cherries from a basket to add to your specific cake, instead of using the whole basket at once.
+
+Here's how Cherry-Picking works:
+1. Choosing the commit:
+    - Identify the specific commit you want to import, by its SHA hash or commit message.
+    - Decide the target branch where you want to apply the changes.
+
+2. Using the `git cherry pick` command:
+    - Run the `git cherry pick` command followed by the commit hash, e.g. `git cherry pick <commit-hash>`.
+
+3. Applying the changes:
+    - Git attempts to apply the chosen commit's changes to your current branch.
+    - If there are conflicts (changes affecting the same files in both branches), you need to manually resolve them before proceeding.
+
+4. Outcome:
+    - Once resolved or conflict-free , the cherry-pick creates a new commit on the target branch, replicating the selcted commit's changes.
+    - The commit history retains information about the original cherry-picked commit and its sourec branch.
+
+Benefits of Cherry-Picking: 
+- Import Specific changes: Useful for incorporating individual bug fixes or features from different branches.
+- Maintain Independent histories: Avoids cluttering the target branch history with unnecessary merge commits.
+
+Drawbacks of Cherry-Picking:
+- Potential conflicts: Requires manual conflict resolution , which can be time consuming.
+- Messier History: Creates more complex branching structures, potentially confusing for collaborators.
+- Rewrite risks: If pushed to remote reposities like Github, changes history for others who might have based thier work on the old history.
+
+When to use Cherry-Picking:
+- Consider cherry-picking for isolated changes from feature branches not intended for full merging.
+- Use it cautiously in collaborative environments to avoid disrupting other's work.
+
+Usecases of cherry-picking:
+1. Fixing a critical bug in one branch and applying it to the main branch quickly.
+2. Importing specific code enhancements from a feature branch without merging the entire branch.
+
+<!-- Now, let's demonstrate cherry-picking for branch synchronization. -->
+<!-- We will follow the steps highlighed above for cherry-picking -->
+<!-- I will go ahead and pick a commit hash from the repository-management branch. -->
