@@ -1,14 +1,33 @@
 The sole purpose of this file is to create git conflicts either remotely or locally.
+
+
+<!--
+This template will help you to have a meaningful PR, please follow it and do not leave it blank.
+-->
+
+# PR Description
+
+<!--
+If there is no related issue, please add a short description about your PR.
+-->
+
+## Related Issue
+
 <!--
 Please use this format to link other issues with their numbers: Close #123
 https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword
 -->
 
+Close #
 
+## Checklist
 
-<!--
-If there is no related issue, please add a short description about your PR.
--->
+- [ ] Did you add a function?
+- [ ] Did you add the tests?
+- [ ] Did you run your tests and are your tests passing?
+- [ ] Did pre-commit not fail on any check?
+- [ ] Did you follow the steps we provided?
+
 <!--
 Please mark your PR as a draft if you realise after the fact that your tests are not passing or
 that your pre-commit check has some failures.
@@ -20,26 +39,8 @@ https://unify.ai/docs/ivy/overview/deep_dive/formatting.html#pre-commit
 
 -->
 
-## Related Issue
-
-
 ### Socials
 
-Close #
-
-## Checklist
-
-- [ ] Did you add a function?
-- [ ] Did you add the tests?
-- [ ] Did you run your tests and are your tests passing?
-- [ ] Did pre-commit not fail on any check?
-- [ ] Did you follow the steps we provided?
 <!--
 If you have Twitter, please provide it here otherwise just ignore this.
-<!--
-This template will help you to have a meaningful PR, please follow it and do not leave it blank.
--->
-
-# PR Description
-
 -->
