@@ -83,3 +83,5 @@ Person B's push will fail because their local branch is not-up-to-data with the 
 <!-- Now, we will proceed to demonstrating what we have learned about Git conflicts. -->
 <!-- We have been able to create and resolved a git conflict locally. -->
 <!-- Let's see if we can replicate this on Github as well. I mean creating git conflicts remotely. -->
+<!-- We have successfully demonstrated and resolved git conflicts both locally (on Git) and remotely (on Github) -->
+<!-- I don't think we need the example1.txt file created earlier anymore so I will go ahead and delete it. -->
