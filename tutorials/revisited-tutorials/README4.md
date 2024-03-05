@@ -100,3 +100,5 @@ Person B's push will fail beacuse their local branch is not-up-to-data with the 
 
 <!-- We will proceed to demonstrating what we have learned about Git conflicts. -->
 <!-- We will create and resolve Git conflicts both locally on our machine and remotely on Github. -->
+<!-- We have been able to successfully create and resolve git conflicts locally on our machine (Git). -->
+<!-- Now, let's do the same remotely on Github. -->
