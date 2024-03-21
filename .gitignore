@@ -1,3 +1,6 @@
+# Environment variables
 djenv
+
+# Unwanted Python cache directories
 __pycache__/
 .pytest_cache/
