@@ -16,7 +16,7 @@ git submodule add <repository_url> <path>
 `````````````````````````````````````````
 
 - <repository_url>: The URL of the repository you want to add as a submodule.
-- <path>: The path within your where the submodule will be added.
+- <path>: The path within your repository where the submodule will be added.
 
 ### Example:
 Let's say you have a project and you want to add an external library named "LibraryX" as a submodule:
@@ -139,3 +139,4 @@ keeping your project modular and organized. By following these steps and command
 you can effectively work with Git submodules in your projects.
 
 <!-- Now, let's try to practice git submodules in our repository. -->
+<!-- So once a suitable dependency or library is available, the steps above will help you add and manage Git Submodules. -->
